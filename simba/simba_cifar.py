@@ -58,6 +58,8 @@ classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse',
 # Model
 print('==> Building model..')
 
+
+# Read the models, need to be modified
 loadname = 'zhu'
 resnet18 = readmodel('resnet18', device)
 loaddivmodel(resnet18, 'resnet18', loadname)
@@ -80,7 +82,7 @@ if device == 'cuda':
 
 criterion = nn.CrossEntropyLoss()
 
-
+# This function is to create the random net
 def net(inputs):
     idx = torch.randint(4, [1])
     if args.idx > -1:
